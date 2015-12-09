@@ -74,7 +74,7 @@ impl EGLImageNativeSurface {
                                    0,
                                    BGRA as u32,
                                    UNSIGNED_BYTE,
-                                   data);
+                                   mem::transmute(data));
                      }
                 }
                 None => {
